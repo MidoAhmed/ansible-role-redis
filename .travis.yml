@@ -17,12 +17,12 @@ addons:
 install:
   - python3 -m pip install tox-travis
 
-  # Check tox-travis version
-  - tox-travis --version
+  # Check tox version
+  - tox --version
 
-  # Check installed tox-travis
-  - pip freeze | grep tox-travis
+  # Check installed tox
+  - pip freeze | grep tox
 
 script:
-  - tox-travis -l
-  - tox-travis
+  - tox -l
+  - tox
