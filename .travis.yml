@@ -32,7 +32,4 @@ install:
   - pip freeze | grep flake8
 
 script:
-  # - molecule test --all
-  # - molecule test
-  - molecule test --scenario-name default
-  - molecule test --scenario-name scenario-with-testinfra-verifier
+  - molecule test
