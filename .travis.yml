@@ -2,8 +2,10 @@
 sudo: required
 language: python
 python:
+  #- "3.6"
+  #- "3.7"
   - "3.8"
-
+  
 services:
   - docker
 
@@ -13,23 +15,14 @@ addons:
       - python3-pip
 
 install:
-  - python3 -m pip install "molecule[docker, lint, ansible]" pytest-testinfra
+  - python3 -m pip install tox-travis
 
-  # Check molecule version
-  - molecule --version
+  # Check tox-travis version
+  - tox-travis --version
 
-  # Check ansible version
-  - ansible --version
-
-  # Check installed docker driver
-  - pip freeze | grep pytest-testinfra
-
-  # Check installed docker driver
-  - pip freeze | grep docker
-
-  # Check installed linting
-  - pip freeze | grep lint
-  - pip freeze | grep flake8
+  # Check installed tox-travis
+  - pip freeze | grep tox-travis
 
 script:
-  - molecule test
+  - tox-travis -l
+  - tox-travis
