@@ -9,10 +9,10 @@ python:
 services:
   - docker
 
-addons:
-  apt:
-    packages:
-      - python3-pip
+cache:
+  pip: true
+  directories:
+  - ".tox"
 
 install:
   - python3 -m pip install tox-travis
