@@ -14,8 +14,8 @@ lint: |
 platforms:
   - name: instance-${TOX_ENVNAME}
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos7}-ansible:latest"
-    command: ""
-    #command: /sbin/init
+    #command: ""
+    command: /sbin/init
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
