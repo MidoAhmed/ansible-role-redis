@@ -41,19 +41,20 @@ provisioner:
 verifier:
   name: testinfra
 
-scenario:
-  name: default
-  test_sequence:
-    #- dependency
-    #- lint
-    - cleanup
-    - destroy
-    - syntax
-    - create
-    #- prepare
-    - converge
-    - idempotence
-    #- side_effect
-    - verify
-    - cleanup
-    - destroy
+# scenario:
+#   name: default
+#   test_sequence:
+#     #- dependency
+#     #
+#     # - lint
+#     # - cleanup
+#     # - destroy
+#     - syntax
+#     - create
+#     #- prepare
+#     - converge
+#     - idempotence
+#     #- side_effect
+#     - verify
+#     - cleanup
+#     - destroy
