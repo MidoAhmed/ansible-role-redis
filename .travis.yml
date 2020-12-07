@@ -38,10 +38,10 @@ env:
 
 
 
-cache:
-  pip: true
-  directories:
-  - ".tox"
+# cache:
+#   pip: true
+#   directories:
+#   - ".tox"
 
 install:
   - python3 -m pip install tox-travis
