@@ -5,11 +5,11 @@ dependency:
 driver:
   name: docker
 
-lint: |
-  set -e
-  yamllint .
-  ansible-lint
-  flake8
+# lint: |
+#   set -e
+#   yamllint .
+#   ansible-lint
+#   flake8
 
 platforms:
   - name: instance-${TOX_ENVNAME}
